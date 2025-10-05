@@ -2,26 +2,26 @@
 ```
 Hey,
 
-Je viens de recevoir le rapport de QA pour la phase 1 du projet. Il y a plusieurs bogues, dont un qui fait planter l'application ! 
-Malheureusement, je ne suis pas au bureau pour les prochains jours (un de mes enfants est tombé malade ce week-end). 
-Je ne sais pas encore quand je pourrai être là dans la semaine. Pourriez-vous prendre en charge la mise en œuvre du projet ? 
-Vous devrez régler les bogues de la phase 1 et mettre en œuvre les éléments de la phase 2 (j'ai ajouté le travail de la phase 2 et les bogues de la section “issues” du repo). 
+Je viens de recevoir le rapport de QA pour la phase 1 du projet. Il y a plusieurs bogues, dont un qui fait planter l'application !
+Malheureusement, je ne suis pas au bureau pour les prochains jours (un de mes enfants est tombé malade ce week-end).
+Je ne sais pas encore quand je pourrai être là dans la semaine. Pourriez-vous prendre en charge la mise en œuvre du projet ?
+Vous devrez régler les bogues de la phase 1 et mettre en œuvre les éléments de la phase 2 (j'ai ajouté le travail de la phase 2 et les bogues de la section “issues” du repo).
 
-Vous devrez cloner et forker le repo et le mettre en place sur votre machine locale (tout ce dont vous avez besoin se trouve dans le fichier README). 
-Ensuite, passez en revue les bogues dans la section des problèmes, puis essayez de reproduire les problèmes sur votre machine locale pour résoudre les bogues et ajouter la gestion des erreurs. 
-Pour gagner du temps de configuration, nous utilisons Flask et JSON pour éviter d'utiliser une base de données. 
-La plupart des outils dont vous aurez besoin se trouvent dans le fichier requirements.txt dans le repo, 
-mais vous devrez installer Flask et notre framework de test préféré, pytest, ainsi que notre outil de test de performance, Locust. 
+Vous devrez cloner et forker le repo et le mettre en place sur votre machine locale (tout ce dont vous avez besoin se trouve dans le fichier README).
+Ensuite, passez en revue les bogues dans la section des problèmes, puis essayez de reproduire les problèmes sur votre machine locale pour résoudre les bogues et ajouter la gestion des erreurs.
+Pour gagner du temps de configuration, nous utilisons Flask et JSON pour éviter d'utiliser une base de données.
+La plupart des outils dont vous aurez besoin se trouvent dans le fichier requirements.txt dans le repo,
+mais vous devrez installer Flask et notre framework de test préféré, pytest, ainsi que notre outil de test de performance, Locust.
 
-Vous devrez également préparer un rapport de test et un rapport de performances, 
-conformément au guide de développement à la fin des spécifications fonctionnelles ci-jointes. 
-Veillez à suivre toutes les directives, car le QA nous reproche de ne pas respecter les normes. 
-Vous devez tester de manière approfondie les résultats requis (à la fois les happy paths et les sad paths) pour toutes les fonctionnalités de l'application.  
-Je vous encourage également à adopter une approche de TDD, car cela vous aidera à rationaliser votre travail. 
+Vous devrez également préparer un rapport de test et un rapport de performances,
+conformément au guide de développement à la fin des spécifications fonctionnelles ci-jointes.
+Veillez à suivre toutes les directives, car le QA nous reproche de ne pas respecter les normes.
+Vous devez tester de manière approfondie les résultats requis (à la fois les happy paths et les sad paths) pour toutes les fonctionnalités de l'application.
+Je vous encourage également à adopter une approche de TDD, car cela vous aidera à rationaliser votre travail.
 
-Une fois que vous aurez terminé, nous ferons un examen de ce que vous avez dans la branche QA du code. 
-Nous examinerons les rapports et la manière dont vous avez résolu les problèmes, 
-nous examinerons votre code et nous testerons la couverture de la nouvelle fonctionnalité. 
+Une fois que vous aurez terminé, nous ferons un examen de ce que vous avez dans la branche QA du code.
+Nous examinerons les rapports et la manière dont vous avez résolu les problèmes,
+nous examinerons votre code et nous testerons la couverture de la nouvelle fonctionnalité.
 
 Merci !
 
@@ -39,14 +39,14 @@ Merci !
 
     * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 
-        Whereas Django does a lot of things for us out of the box, Flask allows us to add only what we need. 
-     
+        Whereas Django does a lot of things for us out of the box, Flask allows us to add only what we need.
+
 
     * [Virtual environment](https://virtualenv.pypa.io/en/stable/installation.html)
 
         This ensures you'll be able to install the correct packages without interfering with Python on your machine.
 
-        Before you begin, please ensure you have this installed globally. 
+        Before you begin, please ensure you have this installed globally.
 
 
 3. Installation
@@ -64,7 +64,7 @@ Merci !
 4. Current Setup
 
     The app is powered by [JSON files](https://www.tutorialspoint.com/json/json_quick_guide.htm). This is to get around having a DB until we actually need one. The main ones are:
-     
+
     * competitions.json - list of competitions
     * clubs.json - list of clubs with relevant information. You can look here to see what email addresses the app will accept for login.
 
@@ -72,10 +72,7 @@ Merci !
 
     You are free to use whatever testing framework you like-the main thing is that you can show what tests you are using.
 
-    We also like to show how well we're testing, so there's a module called 
+    We also like to show how well we're testing, so there's a module called
     [coverage](https://coverage.readthedocs.io/en/coverage-5.1/) you should add to your project.
-   
- 6. Flake8 Report 
-    
 
-
+ 6. Flake8 Report
