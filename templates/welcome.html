@@ -543,7 +543,11 @@
                 <h3>Points Available</h3>
                 <div class="points">{{ club['points'] }}</div>
                 <div class="points-progress">
-                    <div class="progress-bar" style="width: {{ (club['points']|int / 20 * 100)|round }}%"></div>
+                    {% set percent = (club['points']|int / 20 * 100)|round %}
+                    {% if percent > 100 %}
+                        {% set percent = 100 %}
+                    {% endif %}
+                    <div class="progress-bar" data-width="{{ percent }}"></div>
                 </div>
             </div>
             <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
@@ -617,5 +621,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Appliquer la largeur de la barre de progression
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.querySelector('.progress-bar');
+            if (progressBar) {
+                const width = progressBar.getAttribute('data-width');
+                progressBar.style.width = width + '%';
+            }
+        });
+    </script>
 </body>
 </html>
